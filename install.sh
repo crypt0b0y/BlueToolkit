@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get install -y python3 python3-dev python3-pip build-essential python3.11-venv
+sudo apt-get install -y python3 python3-dev python3-pip build-essential python3.11-venv python3-venv
 sudo apt-get install -y bluez bluetooth libbluetooth-dev
 sudo apt-get install -y pulseaudio-module-bluetooth
 sudo apt-get install -y zstd unzip
@@ -128,7 +128,7 @@ cd bluing
 
 sudo python3.10 -m pip install --upgrade pip
 sudo python3.10 -m pip install venv # would fail, but might be needed
-sudo python3.10 -m vevn bluing
+sudo python3.10 -m venv bluing
 source bluing/bin/activate
 
 sudo python3.10 -m pip install dbus-python==1.2.18
@@ -173,7 +173,7 @@ sed -i 's/LMP_VSC_CMD_END = 0x06/LMP_VSC_CMD_END = 0x17/' /usr/share/BlueToolkit
 
 cd /usr/share/BlueToolkit/modules/tools/blueborne
 
-git clone https://github.com/marcinguy/blueborne-CVE-2017-1000251 /usr/share/BlueToolkit/modules/tools/blueborne/blueborne-CVE-2017-1000251
+git clone https://github.com/sgxgsx/blueborne-CVE-2017-1000251 /usr/share/BlueToolkit/modules/tools/blueborne/blueborne-CVE-2017-1000251
 
 cd /usr/share/BlueToolkit/modules/tools/blueborne/blueborne-CVE-2017-1000251
 
